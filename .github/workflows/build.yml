@@ -19,11 +19,11 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
-    - name: Validate Gradle Wrapper
-      run: gradle wrapper --gradle-version 8.7
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      run: gradle :app:assembleDebug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
