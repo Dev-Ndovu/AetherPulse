@@ -20,7 +20,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Generate Local Gradle Wrapper
-      run: gradle wrapper --gradle-version 8.7
+      run: gradle wrapper --gradle-version 8.9
 
     - name: Build Debug APK
       run: ./gradlew :app:assembleDebug
